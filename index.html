@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div id="map"> 
+    
+ 
+    
+    <!-- <div class="snake-body" style="left:60px;top:0"></div>
+    <div class="snake-body" style="left:80px;top:0"></div>
+    <div class="snake-head" style="left:100px;top:0"></div> -->
+   
+    <!-- 
+      【生成蛇的规律】
+      生成蛇，其实本质上就是不断的增加新蛇头。
+      若没有蛇头，则创建一个新蛇头，设置位置为 0,0
+      若有蛇头，则先把原有的蛇头变为身体，再添加新的蛇头。并且控制新蛇头的位置，在旧蛇头的基础上计算新蛇头的位置（根据方向来计算）。
+     -->
+
+     <!-- 
+       【蛇移动的规律】
+       把蛇的最后一节取出来，变为蛇头。
+       旧的蛇头变为身体
+       把最后一节添加到最前面，设置新蛇头的位置
+
+      -->
+  </div>
+  <script src="js/food.js"></script>
+  <script src="js/snake.js"></script>
+  <script src="js/game.js"></script>
+
+  <!-- 使用食物对象 -->
+  <script>
+    // 获取页面上的地图元素
+    var map = document.querySelector('#map'); 
+    // 创建了一个食物对象
+    // var food1 = new Food(map);
+    // // 食物随机一下
+    // food1.randomLoaction();
+
+
+
+   var game = new Game(map);
+   game.start();
+
+
+  </script>
+</body>
+</html>
